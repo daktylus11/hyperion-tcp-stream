@@ -10,11 +10,13 @@ The stream client contains a sample client that sends a visual representation of
 To stream custom data the get_data() method needs to be modified, it returns the data sent to the hyperion server.
 It implements the API functions from https://docs.hyperion-project.org/en/effects/API.html
 To make the LED at (0, 0) shine red for example the list of commands would look something like this:
+
 [
   {'id': IMAGESOLIDFILL, 'args': [0, 0, 0]},
   {'id': IMAGEDRAWPOINT, 'args': [0, 0, 1, 255, 0, 0]},
   {'id': IMAGESHOW, 'args': []}
 ]
+
 here the first command creates a black background
 the second one draws the red point and
 the thrid one tells hyperion to show the modified image
